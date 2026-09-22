@@ -1,0 +1,49 @@
+:root {
+  --off-white: #f0efeb;
+  --black:     #111111;
+  --accent:    #e84020;
+  --white:     #ffffff;
+  --mid:       #888888;
+  --border-light: rgba(0,0,0,0.1);
+  --border-dark:  rgba(255,255,255,0.1);
+  --font: 'Space Grotesk', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html, body { cursor: none; }
+  a, button, input, textarea, [data-cursor-hover] { cursor: none; }
+}
+
+body {
+  font-family: var(--font);
+  background: var(--off-white);
+  color: var(--black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
