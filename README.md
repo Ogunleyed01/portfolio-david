@@ -1,4 +1,4 @@
-# Portfolio (Animated)
+# Portfolio (E-Dave)
 
 A small personal portfolio built with React and Vite, focused on simple animated UI and fast local development.
 
