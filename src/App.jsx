@@ -14,37 +14,144 @@ const navSections = [
 ]
 
 const expertiseItems = [
-  { num: '01', name: 'Front-End Development & React / Vite' },
-  { num: '02', name: 'Gemini AI Integration & Prompt Systems' },
-  { num: '03', name: 'Django REST Framework & API Connectivity' },
-  { num: '04', name: 'HTML5, CSS3 & JavaScript (ES6)' },
-  { num: '05', name: 'Figma-to-Code & Responsive Web UIs' },
-  { num: '06', name: 'TailwindCSS & Modern Utility Styling' },
-  { num: '07', name: 'Convex (BaaS) Auth & Cloud Storage' },
-  { num: '08', name: 'Git Workflow & Team Collaboration' }
+  { num: '01', name: 'Front-End Engineering (React, Next.js 16, Vite)' },
+  { num: '02', name: 'Gemini AI Integration & Prompt Pipelines' },
+  { num: '03', name: 'TypeScript & Strict-Type Software Architecture' },
+  { num: '04', name: 'Backend Services (Node.js, Fastify, Express, Django REST)' },
+  { num: '05', name: 'Databases & ORM (PostgreSQL, PostGIS, Prisma, Supabase)' },
+  { num: '06', name: 'Payments & BaaS (Paystack, Convex, Cloudinary)' },
+  { num: '07', name: 'Figma-to-Code & Modern Responsive CSS / Tailwind' },
+  { num: '08', name: 'Git Monorepos, CI/CD & Production Deployment' }
+]
+
+const projectFilters = [
+  { id: 'all', label: 'ALL BUILDS' },
+  { id: 'ai-fullstack', label: 'AI & FULL-STACK' },
+  { id: 'backend-systems', label: 'BACKEND & SYSTEMS' },
+  { id: 'commerce-web', label: 'COMMERCE & WEB' }
 ]
 
 const workItems = [
   {
-    counter: 'PROJECT // 01 • TOP 5 FINALIST',
-    title: 'EdgeIQ — GDG OAU Build with AI Hackathon',
-    desc: 'Built a Gemini AI-powered quantitative trading intelligence platform, covering the full product lifecycle from PRD and pitch deck through UI architecture. Engineered backend-frontend integration with Django REST Framework and React/Vite, resolving CORS errors, schema mismatches, and authentication flows.',
-    tags: ['Gemini AI', 'React / Vite', 'Django REST', 'Hackathon Top 5'],
-    link: 'https://edge-iq-psi.vercel.app/'
+    id: 'ideatox',
+    counter: 'PROJECT // 01 • FULL-STACK & AI',
+    status: 'ACTIVE OPEN SOURCE',
+    statusType: 'active',
+    title: 'IdeaToX — Architectural Specification & Project Discovery',
+    badge: 'Next.js 16 • React 19 • Gemini AI • Framer Motion',
+    desc: 'The "GitHub + Dribbble" platform for software project ideas. Enables developers to discover validated technical architectures, generate 4-point MVP roadmaps with Gemini AI, remix specs via interactive lineage trees, and preview ideas with dynamic next/og cards.',
+    highlights: [
+      'Gemini AI Spec Generator with deterministic fallback engine',
+      'Interactive visual lineage tree tracking remix & fork graphs',
+      'Discovery bento feed with instant multi-facet tag filtering',
+      'Dynamic 1200x630 OpenGraph card generation via next/og'
+    ],
+    tags: ['Next.js 16', 'React 19', 'TypeScript', 'Gemini AI', 'TailwindCSS v4', 'Framer Motion', 'Supabase'],
+    category: 'ai-fullstack',
+    github: 'https://github.com/Ogunleyed01/ideaToX',
+    link: 'https://github.com/Ogunleyed01/ideaToX',
+    linkLabel: 'VIEW ON GITHUB'
   },
   {
-    counter: 'PROJECT // 02 • FRONTEND DEV',
-    title: 'PL (Peer Learning)',
+    id: 'connectme',
+    counter: 'PROJECT // 02 • BOT & AUTOMATION',
+    status: 'PRODUCTION PIPELINE',
+    statusType: 'active',
+    title: 'ConnectMe — 2027 Internship Tracker & Daily Digest Bot',
+    badge: 'Telegram Bot API • Gemini 2.5 • Cron Automation',
+    desc: 'Stateful, $0-budget Telegram bot that filters, scores, and delivers daily internship opportunities for university students targeting the 2027 IT/SIWES intake. Features a deterministic priority scoring engine, Gemini 2.5 Flash parsing pipeline, and automated GitHub Actions cron dispatches.',
+    highlights: [
+      'Deterministic priority scoring engine (0–100) with strict stipend weighting',
+      'Gemini 2.5 Flash parsing pipeline for unstructured listing feeds',
+      'Interactive 4-state lifecycle machine with 7-day automated follow-up check-ins',
+      'Automated 08:00 WAT daily cron dispatches via GitHub Actions'
+    ],
+    tags: ['TypeScript', 'Node.js', 'Telegram Bot API', 'Gemini 2.5 Flash', 'Supabase', 'GitHub Actions'],
+    category: 'backend-systems',
+    github: 'https://github.com/Ogunleyed01/connectMe',
+    link: 'https://github.com/Ogunleyed01/connectMe',
+    linkLabel: 'VIEW ON GITHUB'
+  },
+  {
+    id: 'rideshare',
+    counter: 'PROJECT // 03 • DISTRIBUTED SYSTEMS',
+    status: 'PRODUCTION BACKEND',
+    statusType: 'active',
+    title: 'RideShare — Monorepo Backend & Spatial Matching Services',
+    badge: 'Fastify • PostgreSQL • PostGIS • Redis 7',
+    desc: 'High-concurrency backend services for RideShare Nigeria engineered in a modular TypeScript monorepo. Features Fastify REST APIs, isolated background workers, PostgreSQL with PostGIS for real-time spatial geospatial rider-driver matching, and Redis 7 for low-latency session caching and queueing.',
+    highlights: [
+      'Spatial PostGIS indexing for low-latency rider-driver radius queries',
+      'Modular monorepo architecture separating API gateways and background workers',
+      'Redis 7 caching layer for real-time driver availability and state locks',
+      'Robust CI/CD quality pipelines with TypeScript strict mode validation'
+    ],
+    tags: ['TypeScript', 'Fastify', 'Node.js 22', 'PostgreSQL', 'PostGIS', 'Redis 7', 'Monorepo'],
+    category: 'backend-systems',
+    github: 'https://github.com/Blackwrld04/RIdeShare',
+    link: 'https://github.com/Blackwrld04/RIdeShare',
+    linkLabel: 'VIEW ON GITHUB'
+  },
+  {
+    id: 'newmarket',
+    counter: 'PROJECT // 04 • E-COMMERCE',
+    status: 'CAMPUS E-COMMERCE',
+    statusType: 'active',
+    title: 'NewMarket — Campus Multi-Vendor Marketplace & Checkout',
+    badge: 'React / Vite • Express • Prisma • Paystack',
+    desc: 'Campus-tailored multi-vendor marketplace platform connecting student buyers with student merchants. Implements role-based storefront management, Paystack checkout integration with secure webhook verification, Prisma ORM on PostgreSQL, and Cloudinary media processing.',
+    highlights: [
+      'End-to-end Paystack payment flow with automated webhook verification',
+      'Role-based vendor onboarding, inventory creation, and fulfillment tracking',
+      'Prisma ORM schema modeling with PostgreSQL relational persistence',
+      'Split deployment architecture across Vercel frontend and Render backend'
+    ],
+    tags: ['React / Vite', 'Node.js / Express', 'Prisma ORM', 'PostgreSQL', 'Paystack API', 'Cloudinary'],
+    category: 'commerce-web',
+    github: 'https://github.com/Ogunleyed01/NewMarket',
+    link: 'https://github.com/Ogunleyed01/NewMarket',
+    linkLabel: 'VIEW ON GITHUB'
+  },
+  {
+    id: 'edgeiq',
+    counter: 'PROJECT // 05 • TOP 5 FINALIST',
+    status: 'BWAI HACKATHON FINALIST',
+    statusType: 'award',
+    title: 'EdgeIQ — Quantitative Trading Intelligence Platform',
+    badge: 'Gemini AI • Django REST • React/Vite',
+    desc: 'Built a Gemini AI-powered quantitative trading intelligence platform for prediction market traders at the GDG OAU Build with AI Hackathon, securing a Top 5 Finalist placement. Engineered backend-frontend integration with Django REST Framework and React/Vite.',
+    highlights: [
+      'Top 5 Finalist finish out of competitive regional hackathon teams',
+      'Seamless REST API integration between Django REST Framework and React/Vite',
+      'Gemini AI market analysis and predictive sentiment evaluation',
+      'End-to-end user authentication, market data feed, and portfolio tracking'
+    ],
+    tags: ['Gemini AI', 'React / Vite', 'Django REST', 'TailwindCSS', 'Hackathon Top 5'],
+    category: 'ai-fullstack',
+    github: 'https://github.com/femix300/Edge-IQ',
+    link: 'https://edge-iq-psi.vercel.app/',
+    linkLabel: 'VIEW LIVE DEMO',
+    secondaryLink: 'https://github.com/femix300/Edge-IQ',
+    secondaryLabel: 'GITHUB'
+  },
+  {
+    id: 'p2p-lms',
+    counter: 'PROJECT // 06 • P2P LEARNING',
+    status: 'COLLABORATIVE BUILD',
+    statusType: 'active',
+    title: 'PL (Peer Learning) — Skill Exchange Platform',
+    badge: 'Figma-to-Code • JavaScript (ES6)',
     desc: 'Peer-to-peer skill exchange platform connecting students who want to teach a skill with those who want to learn one. Built 4–5 responsive pages from Figma designs in collaboration with another frontend developer.',
-    tags: ['HTML5', 'CSS3', 'JavaScript (ES6)', 'Figma to Code'],
-    link: 'https://github.com/olamidefasogbon/P2P-LMS'
-  },
-  {
-    counter: 'PROJECT // 03 • TEAM WORKFLOW',
-    title: 'Ticket Manager',
-    desc: 'Task-tracking tool for teams to create, assign, and monitor tickets, with a clean interface, status updates, and organized workflows focused on usability and collaboration.',
-    tags: ['React', 'JavaScript', 'TailwindCSS', 'Workflow UX'],
-    link: 'https://ticket-manager-react.vercel.app/'
+    highlights: [
+      'Pixel-perfect translation of multi-page Figma specifications',
+      'Modular, accessible UI components with pure semantic CSS',
+      'Collaborative Git workflow with code reviews and branch management'
+    ],
+    tags: ['HTML5', 'CSS3', 'JavaScript (ES6)', 'Figma to Code', 'Git Workflow'],
+    category: 'commerce-web',
+    github: 'https://github.com/olamidefasogbon/P2P-LMS',
+    link: 'https://github.com/olamidefasogbon/P2P-LMS',
+    linkLabel: 'VIEW ON GITHUB'
   }
 ]
 
@@ -92,6 +199,10 @@ export default function App() {
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [copyFeedback, setCopyFeedback] = useState('')
+
+  // Project Filter & Clone Copy states
+  const [activeProjectFilter, setActiveProjectFilter] = useState('all')
+  const [copiedCloneId, setCopiedCloneId] = useState(null)
 
   const navRef = useRef(null)
   const canvasRef = useRef(null)
@@ -239,6 +350,12 @@ export default function App() {
     setTimeout(() => setCopyFeedback(''), 2000)
   }
 
+  const copyCloneCommand = (githubUrl, id) => {
+    navigator.clipboard.writeText(`git clone ${githubUrl}.git`)
+    setCopiedCloneId(id)
+    setTimeout(() => setCopiedCloneId(null), 2200)
+  }
+
   return (
     <>
       {/* 1. Custom Glowing Circle Cursor */}
@@ -301,7 +418,7 @@ export default function App() {
         </button>
       </nav>
 
-      {/* 4. Hero Section - Orange Background Photo */}
+      {/* 4. Hero Section - Orange Background Photo with WebGL Liquid Water Distortion Canvas */}
       <section id="hero">
         <div className="hero-photo-wrap">
           <img src={heroImg} alt="David Ogunleye orange lighting portrait" />
@@ -492,30 +609,117 @@ export default function App() {
           <div className="ns-ghost-num">04</div>
           <div className="ns-title-block">
             <span className="sec-label">SELECTED WORK</span>
-            <h2 className="ns-h2">Projects & Build Highlights</h2>
+            <h2 className="ns-h2">Projects & Engineering Builds</h2>
+            <p className="ns-desc">
+              Production web applications, intelligent automation bots, distributed backend architectures, and campus marketplaces engineered with clean code.
+            </p>
           </div>
         </div>
 
+        {/* Category Filter Bar */}
+        <div className="work-filter-bar">
+          {projectFilters.map((filter) => {
+            const count =
+              filter.id === 'all'
+                ? workItems.length
+                : workItems.filter((w) => w.category === filter.id).length
+            return (
+              <button
+                key={filter.id}
+                className={`work-filter-btn ${activeProjectFilter === filter.id ? 'is-active' : ''}`}
+                onClick={() => setActiveProjectFilter(filter.id)}
+                type="button"
+              >
+                <span>{filter.label}</span>
+                <span className="work-filter-count">[{count}]</span>
+              </button>
+            )
+          })}
+        </div>
+
         <div className="work-grid">
-          {workItems.map((work) => (
-            <div className="work-card" key={work.title}>
-              <div>
-                <div className="work-counter">{work.counter}</div>
-                <h3 className="work-title">{work.title}</h3>
-                <p className="work-desc">{work.desc}</p>
-                <div className="work-tags">
-                  {work.tags.map((tag) => (
-                    <span className="work-tag" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
+          {workItems
+            .filter((work) => activeProjectFilter === 'all' || work.category === activeProjectFilter)
+            .map((work) => (
+              <article className="work-card" key={work.id || work.title}>
+                <div className="work-card-top">
+                  <div className="work-card-header">
+                    <span className="work-counter">{work.counter}</span>
+                    <div className={`work-status-badge ${work.statusType}`}>
+                      <span className="work-status-dot" />
+                      <span>{work.status}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="work-title">
+                    <a href={work.link} target="_blank" rel="noreferrer">
+                      {work.title}
+                    </a>
+                  </h3>
+
+                  {work.badge && <div className="work-badge">{work.badge}</div>}
+
+                  <p className="work-desc">{work.desc}</p>
+
+                  {work.highlights && work.highlights.length > 0 && (
+                    <div className="work-highlights">
+                      <div className="work-highlights-label">// ARCHITECTURAL HIGHLIGHTS</div>
+                      <ul className="work-highlights-list">
+                        {work.highlights.map((item, idx) => (
+                          <li key={idx}>
+                            <span className="work-hl-icon">▹</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="work-tags">
+                    {work.tags.map((tag) => (
+                      <span className="work-tag" key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <a href={work.link} target="_blank" rel="noreferrer" className="work-link">
-                VIEW PROJECT →
-              </a>
-            </div>
-          ))}
+
+                <div className="work-card-footer">
+                  <div className="work-links-group">
+                    <a
+                      href={work.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-link"
+                    >
+                      {work.linkLabel || 'VIEW PROJECT'} <span className="arrow-icon">↗</span>
+                    </a>
+
+                    {work.secondaryLink && (
+                      <a
+                        href={work.secondaryLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="work-link-secondary"
+                      >
+                        {work.secondaryLabel || 'GITHUB'} <span className="arrow-icon">↗</span>
+                      </a>
+                    )}
+                  </div>
+
+                  {work.github && (
+                    <button
+                      className="work-clone-btn"
+                      onClick={() => copyCloneCommand(work.github, work.id)}
+                      title={`Copy clone command: git clone ${work.github}.git`}
+                      type="button"
+                    >
+                      {copiedCloneId === work.id ? 'CLONE CMD COPIED!' : 'CLONE CMD'}
+                    </button>
+                  )}
+                </div>
+              </article>
+            ))}
         </div>
       </section>
 
@@ -550,19 +754,27 @@ export default function App() {
 
           <div className="hf-marquee-wrap">
             <div className="hf-marquee">
-              <div className="hf-marquee-item">REACT / VITE</div>
+              <div className="hf-marquee-item">REACT 19 / VITE</div>
+              <div className="hf-marquee-item">NEXT.JS 16</div>
+              <div className="hf-marquee-item">TYPESCRIPT</div>
               <div className="hf-marquee-item">GEMINI AI</div>
+              <div className="hf-marquee-item">FASTIFY</div>
+              <div className="hf-marquee-item">POSTGIS & POSTGRESQL</div>
+              <div className="hf-marquee-item">PRISMA ORM</div>
+              <div className="hf-marquee-item">PAYSTACK PAYMENTS</div>
               <div className="hf-marquee-item">DJANGO REST</div>
               <div className="hf-marquee-item">TAILWINDCSS</div>
-              <div className="hf-marquee-item">FIGMA TO CODE</div>
-              <div className="hf-marquee-item">HNG TECH</div>
               {/* Duplicate */}
-              <div className="hf-marquee-item">REACT / VITE</div>
+              <div className="hf-marquee-item">REACT 19 / VITE</div>
+              <div className="hf-marquee-item">NEXT.JS 16</div>
+              <div className="hf-marquee-item">TYPESCRIPT</div>
               <div className="hf-marquee-item">GEMINI AI</div>
+              <div className="hf-marquee-item">FASTIFY</div>
+              <div className="hf-marquee-item">POSTGIS & POSTGRESQL</div>
+              <div className="hf-marquee-item">PRISMA ORM</div>
+              <div className="hf-marquee-item">PAYSTACK PAYMENTS</div>
               <div className="hf-marquee-item">DJANGO REST</div>
               <div className="hf-marquee-item">TAILWINDCSS</div>
-              <div className="hf-marquee-item">FIGMA TO CODE</div>
-              <div className="hf-marquee-item">HNG TECH</div>
             </div>
           </div>
         </div>
